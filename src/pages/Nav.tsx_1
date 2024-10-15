@@ -1,0 +1,32 @@
+import React from 'react'
+import Button from '@mui/material/Button';
+import * as NavStyle from './Nav.style';
+import Stack from '@mui/material/Stack';
+import * as COLOR from '../constants/color'
+import { ThemeProvider } from '@mui/material';
+import { theme } from '../constants/mui/thema';
+
+
+
+function Nav() {
+    return (
+        <NavStyle.NavContainer>
+            <NavStyle.ButtonContainer>
+                <Stack spacing={2} direction="row">
+                    {/* 'inherit' | 'primary' | 'secondary' | 'success' | 'error' | 'info' | 'warning', */}
+                    <ThemeProvider theme={theme}>
+                        <Button variant="contained" color='primary' size='small'>JPA</Button>
+                        <Button variant="contained" color='primary' size='small'>QueryDsl</Button>
+                        <Button variant="contained" color='secondary' size='small'>Mybatis</Button>
+                    </ThemeProvider>
+                    <NavStyle.ColorButton sx={{ bgcolor: COLOR.SCHOLAR1, color: COLOR.WHITE }}>
+                        Custom CSS
+                    </NavStyle.ColorButton>
+                </Stack>
+            </NavStyle.ButtonContainer>
+        </NavStyle.NavContainer>
+
+    )
+}
+
+export default Nav
