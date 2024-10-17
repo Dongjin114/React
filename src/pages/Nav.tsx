@@ -6,7 +6,7 @@ import * as COLOR from '../constants/color'
 import { ThemeProvider } from '@mui/material';
 import { theme } from '../constants/mui/thema';
 import { OrmState } from '../constants/enums';
-import BaseButton from '../components/mui/BaseButton';
+import BaseButton from '../components/button/BaseButton';
 
 function Nav() {
 
@@ -16,32 +16,25 @@ function Nav() {
         setOrmState(status);
     }
 
-    useEffect(() => {
-        console.log("ormState=", ormState)
-    }, [ormState])
-
-
     return (
         <NavStyle.NavContainer>
             <NavStyle.ButtonContainer>
                 <Stack spacing={2} direction="row">
-                    {/* 'inherit' | 'primary' | 'secondary' | 'success' | 'error' | 'info' | 'warning', */}
                     <ThemeProvider theme={theme}>
 
-
                         <BaseButton
-                            data={OrmState.JPA}
-                            status={ormState}
+                            buttonName={OrmState.JPA}
+                            color={ormState}
                             onClick={() => handleOrmState(OrmState.JPA)} />
 
                         <BaseButton
-                            data={OrmState.QUERYDSL}
-                            status={ormState}
+                            buttonName={OrmState.QUERYDSL}
+                            color={ormState}
                             onClick={() => handleOrmState(OrmState.QUERYDSL)} />
 
                         <BaseButton
-                            data={OrmState.MYBATIS}
-                            status={ormState}
+                            buttonName={OrmState.MYBATIS}
+                            color={ormState}
                             onClick={() => handleOrmState(OrmState.MYBATIS)} />
                     </ThemeProvider>
                 </Stack>

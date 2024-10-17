@@ -6,13 +6,13 @@ export const MainContainer = styled.div`
 
 export const NavContainer = styled.div`
     background-color: ${COLOR.BRISK1};
-    padding-top :100px;
-    padding-bottom : 20px;
+    padding-top :70px;
+    padding-bottom : 30px;
 `
 
 export const BodyContainer = styled.div`
     display: flex;
-    padding-top: 20px;
+    padding-top: 30px;
     align-items: center;
     justify-content: center;
 `
