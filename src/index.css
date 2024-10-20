@@ -1,4 +1,7 @@
-body {
+body, html {
   margin: 0;
-  background-color: #A3C6C4;
+  /* background-color: #A3C6C4; */
+  /* overflow:  auto; */
+  margin: 0;
+  padding: 0;
 }
